@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skils Test</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #413a3a);
+            color: rgb(184, 44, 44);
+            text-align: center;
+            padding: 40px;
+        }
+        .box {
+            background-color: #0080ff;
+            color: #1d0863;
+            width: 400px;
+            margin: auto;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 0 15px rgba(24, 10, 169, 0.5);
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #050447;
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: none;
+        }
+        button {
+            background-color: #07cbd5;
+            color: rgb(20, 5, 5);
+            border: none;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #09c1e1;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Non-metals Elements</h2>
+        <p> Enter a Non-metal Elements code to search</p>
+
+        <input type="text" id="element1" placeholder="Example: H"> 
+        
+        <br>
+        <button py-click="Check Details">Check Details</button>
+        <div class="result">
+            <h3>Result</h3>
+<!--              Symbol, Name, Number, Mass -->
+            <p><b>Symbol:</b><span id="code">-</span></p>
+            <p><b>Element Name:</b><span id="name">-</span></p>
+             <p><b>Atomic Number:</b><span id="number">-</span><p>
+             <p><b>Atomic Mass:</b><span id="mass">-</span></p>
+            
+        </div>
+
+    <!--Connect Python file -->
+    <script type="py" src="main.py"></script>
+
+
+</body>
+
+</html>
